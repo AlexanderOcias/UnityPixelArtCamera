@@ -1,0 +1,14 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+            "path": ".",
+			"file_include_patterns":
+			[
+				"*.cs"
+			]
+		}
+	],
+	"solution_file": "./UnityPixelArtCamera.sln"
+}
