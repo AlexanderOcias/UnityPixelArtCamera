@@ -44,7 +44,7 @@ public class PixelArtCamera : MonoBehaviour {
 		if (mainCamera == null) {
 			mainCamera = Camera.main;
 		}
-		if (mainCanvas != null) {
+		if (mainCanvas == null) {
 			GameObject canvasObj = GameObject.Find("Canvas");
 			if (canvasObj != null) {
 				mainCanvas = canvasObj.GetComponent<Canvas>();
