@@ -1,1 +1,632 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"gettemporary",
+				"GetTemporary(int width, int height, int depthBuffer, RenderTextureFormat format)\tRenderTexture"
+			],
+			[
+				"v",
+				"void\tvoid"
+			],
+			[
+				"reference",
+				"referencePixelsPerUnit\tfloat { get; set; }"
+			],
+			[
+				"render",
+				"renderMode\tRenderMode { get; set; }"
+			],
+			[
+				"HSL",
+				"HSLtoRGB\tcontext"
+			],
+			[
+				"RGB",
+				"RGBtoHSL\tcontext"
+			],
+			[
+				"pixel",
+				"pixelSize\tVector2"
+			],
+			[
+				"vectr",
+				"vector2IntValue\tVector2Int { get; set; }"
+			],
+			[
+				"vector",
+				"vector2IntValue\tVector2Int { get; set; }"
+			],
+			[
+				"vect",
+				"vector2Value\tVector2 { get; set; }"
+			],
+			[
+				"toggle",
+				"Toggle(bool value, params GUILayoutOption[] options)\tbool"
+			],
+			[
+				"EditorGUI",
+				"EditorGUILayout\tEditorGUILayout"
+			],
+			[
+				"lab",
+				"LabelField(string label, params GUILayoutOption[] options)\tvoid"
+			],
+			[
+				"EditorGui",
+				"EditorGUILayout\tEditorGUILayout"
+			],
+			[
+				"camera",
+				"cameraSubpixelOffset\tcontext"
+			],
+			[
+				"Round",
+				"RoundToInt(float f)\tint"
+			],
+			[
+				"Force",
+				"ForceMode2D\tForceMode2D"
+			],
+			[
+				"A",
+				"AddForce(Vector2 force)\tvoid"
+			],
+			[
+				"BoxColl",
+				"BoxCollider2D\tBoxCollider2D"
+			],
+			[
+				"Rigid",
+				"Rigidbody2D\tRigidbody2D"
+			],
+			[
+				"inv",
+				"invulnerable\tbool"
+			],
+			[
+				"inve",
+				"invulnerable\tbool"
+			],
+			[
+				"Supertest",
+				"SuperTextMesh\tSuperTextMesh"
+			],
+			[
+				"tag",
+				"CompareTag(string tag)\tbool"
+			],
+			[
+				"scene",
+				"LoadScene(string sceneName)\tvoid"
+			],
+			[
+				"Scene",
+				"SceneManager\tSceneManager"
+			],
+			[
+				"getbutton",
+				"GetMouseButton(int button)\tbool"
+			],
+			[
+				"previous",
+				"previousValueAssigned\tbool"
+			],
+			[
+				"org",
+				"orthographicSize\tfloat { get; set; }"
+			],
+			[
+				"Translat",
+				"Translate(float x, float y, float z)\tvoid"
+			],
+			[
+				"snapp",
+				"snappedY\tfloat"
+			],
+			[
+				"matrix",
+				"ResetProjectionMatrix()\tvoid"
+			],
+			[
+				"final",
+				"finalBlitStretch\tVector2"
+			],
+			[
+				"internal",
+				"internalResAspect\tfloat"
+			],
+			[
+				"ceil",
+				"CeilToInt(float f)\tint"
+			],
+			[
+				"Horizontalfov",
+				"HorizontalFOVtoVerticalFOV(float horizontalFOV, float aspectRatio)\tfloat"
+			],
+			[
+				"VerticalFOV",
+				"VerticalFOVtoHorizontalFOV(float verticalFOV, float aspectRatio)\tfloat"
+			],
+			[
+				"Edit",
+				"EditorGUI\tEditorGUI"
+			],
+			[
+				"Getcomp",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"moveto",
+				"MoveTo(GameObject target, Hashtable args)\tvoid"
+			],
+			[
+				"rotate",
+				"RotateTo(GameObject target, Vector3 rotation, float time)\tvoid"
+			],
+			[
+				"transla",
+				"Translate(float x, float y, float z)\tvoid"
+			],
+			[
+				"GetCompo",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"clamp",
+				"Clamp(float value, float min, float max)\tfloat"
+			],
+			[
+				"Qua",
+				"QualitySettings\tQualitySettings"
+			],
+			[
+				"read",
+				"Read()\tvoid"
+			],
+			[
+				"bound",
+				"bottomRightBounds\tVector3"
+			],
+			[
+				"log",
+				"Log(object message)\tvoid"
+			],
+			[
+				"Key",
+				"KeyCode\tKeyCode"
+			],
+			[
+				"getkeyd",
+				"GetKeyDown(KeyCode key)\tbool"
+			],
+			[
+				"Textmesh",
+				"TextMeshProUGUI\tTextMeshProUGUI"
+			],
+			[
+				"GetComop",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"textmeshpr",
+				"TextMeshProUGUI\tTextMeshProUGUI"
+			],
+			[
+				"Vector3",
+				"Vector3.Scale(scale)"
+			],
+			[
+				"for",
+				"for\tFor"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 119.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"fold",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"definition",
+				"OmniSharpSublime: Goto Definition"
+			],
+			[
+				"pack inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack list",
+				"Package Control: List Packages"
+			],
+			[
+				"pack disc",
+				"Package Control: Discover Packages"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"packag",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pack ",
+				"Preferences: Browse Packages"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"bea",
+				"Javascript Beautify"
+			],
+			[
+				"unity",
+				"Set Syntax: Unity C#"
+			],
+			[
+				"c#",
+				"Set Syntax: C#"
+			],
+			[
+				"pack disv",
+				"Package Control: Discover Packages"
+			],
+			[
+				"packainst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 580.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera"
+	],
+	"file_history":
+	[
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias/PixelArtCamera/PixelArtCamera.cs",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/.gitignore",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias/PixelArtCamera/PixelArtSprite.shader",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/UnityPixelArtCamera.sublime-workspace",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias/PixelArtCamera/Example/SixtyFPS.cs",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias/PixelArtCamera/Editor/PixelArtCameraEditor.cs",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias/PixelArtCamera/PixelArt.shader",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/UnityPixelArtCamera.sublime-project",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Ocias/PixelArtCamera/PixelArt.shader",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Ocias/PixelArtCamera/PixelArtDiffuse.shader",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Ocias/PixelArtCamera/PixelArtFont.shader",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Ocias/PixelArtCamera/PixelArtCamera.cs",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Ocias/PixelArtCamera/Example/CameraPan.cs",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/RandomRotate.cs",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Ocias/PixelArtCamera/PixelArtParticle.shader",
+		"/Users/alexander/Desktop/demosceneRecordingPage.html",
+		"/Users/alexander/Desktop/demosceneRecordingPage",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Ocias/PixelArtCamera/Example/CanvasGraphicDesignGrid.cs",
+		"/Users/alexander/Downloads/DownloadsTilSep17/builtin_shaders-5/DefaultResourcesExtra/Particle Alpha Blend.shader",
+		"/Users/alexander/Downloads/DownloadsTilSep17/builtin_shaders-5/DefaultResourcesExtra/Particle Blend.shader",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/CameraPan.cs",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Ocias/PixelArtCamera/PixelArtUI.shader",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Ocias/PixelArtCamera/UI-DefaultFont.shader",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Ocias/PixelArtCamera/UI-Default.shader",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/TouhouLaser.cs",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/LaserSpawner.cs",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Ocias/PixelArtCamera/Editor/PixelArtCameraEditor.cs",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/GameManager.cs",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/Ocias/PixelArtCamera/PixelArtCamera.cs",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/Syringe.cs",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/Ocias/PixelArtCamera/PixelArt.shader",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/Ocias/PixelArtCamera/PixelArtGammaShift.shader",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Camera Perspective Editor/Scripts/CameraPerspectiveEditor.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Camera Perspective Editor/Scripts/Editor/CameraPerspectiveEditorEditor.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/Editor/SlavesEditorUtilities.cs",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/OciasPixelArt.shader",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/MovingSpriteTest.cs",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/CameraMoveTest.cs",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Ocias/PixelArtCamera/PixelPerfectCamera.cs",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/PixelPerfectCamera.cs",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Ocias/PixelArtCamera/OciasPixelArt.shader",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/CRT.shader",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Clavian/SuperTextMesh/Shaders/UI/UI Pixel Snap.shader",
+		"/Users/alexander/Downloads/DownloadsTilSep17/builtin_shaders-5/CGIncludes/UnityCG.cginc",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Sprites-PixelSnap-AlphaBlended.shader",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Sprites-Default.shader",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/Sprites-PixelArt.shader",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/PixelPerfectCamera.cs",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/VisorBulletSpawner.cs",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/HomingBullet.cs",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/TapToStart.cs",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/UndertaleHeartTest.cs",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/UndertaleBulletTest.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/Shaders/GrassWarp.shader",
+		"/Users/alexander/Downloads/DownloadsTilSep17/builtin_shaders-5/DefaultResources/Sprites-Default.shader",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/KillOldBullet.cs",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/BulletFlower.cs",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/Ocias/ColorCycle.shader",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/Ocias/Sprites-PixelSnap-AlphaBlended.shader",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/Ocias/Sprites-PixelArt.shader",
+		"/Users/alexander/Unity Projects/GirlJail/Assets/Ocias/Singleton.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/Scripts/LineCollider.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/Scripts/TouchManager.cs",
+		"/Users/alexander/Unity Projects/GirlJail/GirlJail.sublime-project",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/PixelPerfectCamera.cs",
+		"/Users/alexander/Downloads/Unity-Technologies-ui-0bd08e22bc17/UnityEngine.UI/UI/Core/CanvasUpdateRegistry.cs",
+		"/Users/alexander/Unity Projects/2DMobileGame/Assets/UI-Default.shader",
+		"/Users/alexander/Unity Projects/MobilePerformanceTest/slaves.sublime-project",
+		"/Users/alexander/Unity Projects/MobilePerformanceTest/Assets/QualityTester.cs",
+		"/Users/alexander/Downloads/ExcellentShadow2/full_ES.fx",
+		"/Users/alexander/Unity Projects/SimpleMobileAspectRatioFramework/Assets/Ocias/SimpleMobileAspectRatioFramework/PerfectFOV.cs",
+		"/Users/alexander/Unity Projects/SimpleMobileAspectRatioFramework/Assets/Ocias/SimpleMobileAspectRatioFramework/CanvasGraphicDesignGrid.cs",
+		"/Users/alexander/Unity Projects/SimpleMobileAspectRatioFramework/Assets/Ocias/SimpleMobileAspectRatioFramework/CanvasGraphicDesignGridV2.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/Scripts/TouchMovement.cs",
+		"/Users/alexander/Unity Projects/SimpleMobileAspectRatioFramework/SimpleMobileAspectRatioFramework.sublime-project",
+		"/Users/alexander/Unity Projects/ColourTools/Assets/Editor/ColourTools.cs",
+		"/Users/alexander/Unity Projects/STMTest/Assets/PerfectFOV.cs",
+		"/Users/alexander/Downloads/Chrono Cross (USA) (Disc 1)/Chrono Cross (USA).m3u",
+		"/Users/alexander/Downloads/DownloadsTilSep17/builtin_shaders-5/DefaultResourcesExtra/UI/UI-Default.shader",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/SmearEffect/CurvedSmear.shader",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/TouchHighlighter.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/AnimalCrossingTapToTalk.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/Scripts/HeadLookTest.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/QuickSTMTest.cs",
+		"/Users/alexander/Unity Projects/STMTest/Assets/STMTest.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/LookAtPlayerTest.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/SabreCSG/Shaders/UINoAlpha.shader",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Clavian/SuperTextMesh/Shaders/UI/UI.shader",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Clavian/SuperTextMesh/Sample/STMDialogueSample.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/AnimalCrossingFakeDialogue.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/29ScreenSpaceGradientShader/ScreenSpaceGradient.shader",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/Scripts/AnimatorController.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Clavian/SuperTextMesh/Scripts/SuperTextMesh.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Clavian/SuperTextMesh/Sample/STMEventInterpreter.cs",
+		"/Users/alexander/Unity Projects/STMTest/Assets/Clavian/SuperTextMesh/Shaders/UI/UI.shader",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/UndertaleHeartTest.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/UndertaleBulletTest.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/SmearEffect/SmearEffect.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/CurvedWorld.shader",
+		"/etc/apache2/httpd.conf",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Clavian/SuperTextMesh/Scripts/SuperTextMeshData.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/STMValueTest.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Clavian/SuperTextMesh/Sample/STMVertexMod.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/Scripts/Typewriter.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/TextMesh Pro/Examples/Scripts/TMP_ExampleScript_01.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/TextMesh Pro/Examples/Scripts/TeleType.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/ProceedButton.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/DialogueDebug.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/TextMesh Pro/Scripts/TMP_Text.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/TextMesh Pro/Scripts/TMPro_MeshUtilities.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/slaves.sublime-project",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/CanvasGraphicDesignGrid.cs",
+		"/Users/alexander/Movies/Studio Ghibli/My_Neighbors_the_Yamadas_(1999)_[720p,BluRay,x264]_-_THORA/My_Neighbors_the_Yamadas_(1999)_[720p,BluRay,x264]_-_THORA.nfo",
+		"/Users/alexander/Library/Application Support/Sublime Text 3/Packages/OmniSharp/lib/omnisharp.py",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/SlavesScene.cs",
+		"/Users/alexander/Library/Application Support/Sublime Text 3/Packages/User/Unity3DReference.sublime-settings",
+		"/Users/alexander/Library/Application Support/Sublime Text 3/Packages/Unity3DReference/Default (OSX).sublime-settings",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/FluidGridTest.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/Scripts/PhysicalSun.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/Scripts/MenuControl.cs",
+		"/Users/alexander/Downloads/builtin_shaders-5/DefaultResourcesExtra/Unlit/Unlit-Color.shader",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/switch.fbx",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/ProjectSettings/ProjectSettings.asset",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/QualityManager.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assembly-UnityScript-firstpass.unityproj",
+		"/Users/alexander/Downloads/amgen-email-1.1/amgen-email-1.1.html",
+		"/Users/alexander/Sites/Amgen/Amgen-Unity/README.md",
+		"/Users/alexander/Library/Application Support/Karabiner/private.xml"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"pixelsnap",
+			"setuprendertex"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 114.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.variable_get":
+	{
+		"height": 114.0
+	},
+	"pinned_build_system": "",
+	"project": "UnityPixelArtCamera.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pixel",
+				"Assets/PixelPerfectCamera.cs"
+			],
+			[
+				"touchmanager",
+				"Assets/Ocias/Slaves/Scripts/TouchManager.cs"
+			],
+			[
+				"curvedsmear",
+				"~/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/SmearEffect/CurvedSmear.shader"
+			],
+			[
+				"teletyp",
+				"Assets/TextMesh Pro/Examples/Scripts/TeleType.cs"
+			],
+			[
+				"procee",
+				"Assets/ProceedButton.cs"
+			],
+			[
+				"proceed",
+				"Assets/ProceedButton.cs"
+			],
+			[
+				"dialogue",
+				"Assets/DialogueDebug.cs"
+			],
+			[
+				"graphic",
+				"Assets/CanvasGraphicDesignGrid.cs"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Unity Projects/GirlJail/GirlJail.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 252.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

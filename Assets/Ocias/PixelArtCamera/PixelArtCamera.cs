@@ -107,19 +107,25 @@ public class PixelArtCamera : MonoBehaviour {
 		// Make sure our camera projection fits our resolution
 		mainCamera.orthographicSize = internalResolution.y / 2f / pixelsPerUnit;
 
-		rt = new RenderTexture(internalResolution.x, internalResolution.y, 16, RenderTextureFormat.ARGB32);
+		// rt = new RenderTexture(internalResolution.x, internalResolution.y, 16, RenderTextureFormat.ARGB32);
 		
-		if (smooth) {
-			rt.filterMode = FilterMode.Bilinear;
-		} else {
-			rt.filterMode = FilterMode.Point;
-		}
-		rt.Create();
+		// if (smooth) {
+		// 	rt.filterMode = FilterMode.Bilinear;
+		// } else {
+		// 	rt.filterMode = FilterMode.Point;
+		// }
+		// rt.Create();
 	}
 
 	void OnPreRender() {
 		if ((float)Screen.width / (float)Screen.height != currentAspectRatio) {
 			SetupRenderTexture();
+		}
+		rt = RenderTexture.GetTemporary(internalResolution.x, internalResolution.y, 16, RenderTextureFormat.ARGB32);
+		if (smooth) {
+			rt.filterMode = FilterMode.Bilinear;
+		} else {
+			rt.filterMode = FilterMode.Point;
 		}
 		if (mainCamera != null) {
 			// Render to our small internal texture
@@ -133,6 +139,7 @@ public class PixelArtCamera : MonoBehaviour {
 		// null the targettexture so we can blit to the screen
 		mainCamera.targetTexture = null;
 		
+
 		if (smooth) {
 			Graphics.Blit(rt, null, finalBlitStretch, (finalBlitStretch - Vector2.one) / -2f);
 		} else {
@@ -147,6 +154,7 @@ public class PixelArtCamera : MonoBehaviour {
 			Graphics.Blit(largeRt, null, finalBlitStretch, (finalBlitStretch - Vector2.one) / -2f);
 			RenderTexture.ReleaseTemporary(largeRt);
 		}
+		RenderTexture.ReleaseTemporary(rt);
 		
     }
 }
