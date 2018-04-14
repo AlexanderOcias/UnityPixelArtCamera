@@ -51,7 +51,7 @@ Shader "Ocias/Pixel Art Sprite"
 			float _PixelsPerUnit;
 
 			inline float4 ViewSpacePixelSnap (float4 pos) {
-
+				float pixelSize = _ScreenParams.xy;
 				float2 halfScreenRes = _ScreenParams.xy * 0.5f;
 
 				// // View space Pixel Snapping

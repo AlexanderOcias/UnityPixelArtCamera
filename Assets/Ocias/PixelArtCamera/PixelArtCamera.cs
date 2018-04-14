@@ -1,4 +1,4 @@
-﻿// Ppppperfect pixel art rendering!!
+﻿// Ppppperfect pixel art rendering!! version 2
 // By Alexander Ocias
 // https://ocias.com
 
@@ -15,6 +15,11 @@ public class PixelArtCamera : MonoBehaviour {
 	[HideInInspector] public bool forceSquarePixels = false;
 	[HideInInspector] public Vector2Int pixels = new Vector2Int(1080/12, 1920/12);
 	[HideInInspector] public float pixelsPerUnit = 100f;
+	[HideInInspector] public bool requireStencilBuffer = false;
+	public bool useUpscaleShader = false;
+
+	public Material upscaleMaterial;
+
 	RenderTexture rt;
 
 	float targetAspectRatio;
@@ -37,6 +42,13 @@ public class PixelArtCamera : MonoBehaviour {
 		if (canvasObj != null) {
 			mainCanvas = canvasObj.GetComponent<Canvas>();
 		}
+		Material bilinearUpscaleMat = new Material(Shader.Find("Hidden/BilinearSharp"));
+		if (bilinearUpscaleMat != null) {
+			upscaleMaterial = bilinearUpscaleMat;
+			upscaleMaterial.SetVector("_DestinationResolution", new Vector4(Screen.width, Screen.height, 0, 0));
+			useUpscaleShader = true;
+		}
+		
 	}
 
 	public void SetupRenderTexture () {
@@ -122,10 +134,13 @@ public class PixelArtCamera : MonoBehaviour {
 			SetupRenderTexture();
 		}
 		rt = RenderTexture.GetTemporary(internalResolution.x, internalResolution.y, 16, RenderTextureFormat.ARGB32);
-		if (smooth) {
+		if (smooth || useUpscaleShader) {
 			rt.filterMode = FilterMode.Bilinear;
 		} else {
 			rt.filterMode = FilterMode.Point;
+		}
+		if (requireStencilBuffer) {
+			rt.depth = 32;
 		}
 		if (mainCamera != null) {
 			// Render to our small internal texture
@@ -142,6 +157,9 @@ public class PixelArtCamera : MonoBehaviour {
 
 		if (smooth) {
 			Graphics.Blit(rt, null, finalBlitStretch, (finalBlitStretch - Vector2.one) / -2f);
+		} else if (useUpscaleShader) {
+			upscaleMaterial.SetVector("_DestinationResolution", new Vector4(Screen.width, Screen.height, 0, 0));
+			Graphics.Blit(rt, null, upscaleMaterial);
 		} else {
 			// draw to buffer at least as big as the screen
 			int scaleMultiple = Mathf.CeilToInt((float)Screen.width / (float)internalResolution.x);

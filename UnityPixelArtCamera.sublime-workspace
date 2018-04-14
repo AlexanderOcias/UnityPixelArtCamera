@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"getkeydown",
+				"GetKeyDown(KeyCode key)\tbool"
+			],
+			[
+				"set",
+				"SetVector(string name, Vector4 value)\tvoid"
+			],
+			[
+				"upscale",
+				"upscaleMaterial\tMaterial"
+			],
+			[
+				"float",
+				"float2\tcontext"
+			],
+			[
+				"precalc",
+				"precalc_texel\tcontext"
+			],
+			[
 				"gettemporary",
 				"GetTemporary(int width, int height, int depthBuffer, RenderTextureFormat format)\tRenderTexture"
 			],
@@ -235,10 +255,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 119.0,
-		"last_filter": "",
+		"height": 392.0,
+		"last_filter": "cg",
 		"selected_items":
 		[
+			[
+				"cg",
+				"Set Syntax: UnityShader-CG"
+			],
 			[
 				"fold",
 				"Code Folding: Fold Tag Attributes"
@@ -330,13 +354,35 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/alexander/Unity Projects/UnityPixelArtCamera"
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias/PixelArtCamera",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias/PixelArtCamera/Editor"
 	],
 	"file_history":
 	[
+		"/Users/alexander/Unity Projects/MobileRPG/Assets/ChunkCamera.cs",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/SceneChangeTest.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/SlavesScene.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/Scripts/ChunkCamera.cs",
+		"/Users/alexander/Unity Projects/PlayablesTest/Assets/PlayAnimationSample.cs",
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/ForestScene.cs",
+		"/Users/alexander/Downloads/DownloadsTilSep17/builtin_shaders-5/DefaultResources/Sprites-Default.shader",
 		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias/PixelArtCamera/PixelArtCamera.cs",
-		"/Users/alexander/Unity Projects/UnityPixelArtCamera/.gitignore",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias/PixelArtCamera/BilinearSharp.shader",
+		"/Users/alexander/Unity Projects/MobileRPG/Assets/PlayerController.cs",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Temp/Compiled-Hidden-BilinearSharp.shader",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Temp/ParsedCombinations-Hidden-BilinearSharp.shader",
+		"/Users/alexander/Downloads/DownloadsTilSep17/Unity Asset - Marvelous Techniques/Unity Asset - Marvelous Techniques v1/Unity Asset - Marvelous Techniques v1.xx/Assets/Standard Assets/Effects/ImageEffects/Scripts/PostEffectsBase.cs",
+		"/Users/alexander/Unity Projects/Chopper/Assets/Standard Assets/Effects/ImageEffects/Scripts/Tonemapping.cs",
+		"/Users/alexander/Unity Projects/MobileRPG/Assets/MoveTest.cs",
+		"/Users/alexander/Downloads/DownloadsTilSep17/app-unity-master-master/3rdPartyLibraries/Colorful/Shaders/Colorful.cginc",
+		"/Users/alexander/Downloads/DownloadsTilSep17/app-unity-master-master/3rdPartyLibraries/Colorful/Shaders/CC_Pixelate.shader",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias/PixelArtCamera/UpscaleShader.shader",
 		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias/PixelArtCamera/PixelArtSprite.shader",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias/PixelArtCamera/PixelArtDiffuse.shader",
+		"/Users/alexander/Unity Projects/UnityPixelArtCamera/.gitignore",
 		"/Users/alexander/Unity Projects/UnityPixelArtCamera/UnityPixelArtCamera.sublime-workspace",
 		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias/PixelArtCamera/Example/SixtyFPS.cs",
 		"/Users/alexander/Unity Projects/UnityPixelArtCamera/Assets/Ocias/PixelArtCamera/Editor/PixelArtCameraEditor.cs",
@@ -388,7 +434,6 @@
 		"/Users/alexander/Unity Projects/GirlJail/Assets/UndertaleHeartTest.cs",
 		"/Users/alexander/Unity Projects/GirlJail/Assets/UndertaleBulletTest.cs",
 		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/Shaders/GrassWarp.shader",
-		"/Users/alexander/Downloads/DownloadsTilSep17/builtin_shaders-5/DefaultResources/Sprites-Default.shader",
 		"/Users/alexander/Unity Projects/GirlJail/Assets/KillOldBullet.cs",
 		"/Users/alexander/Unity Projects/GirlJail/Assets/BulletFlower.cs",
 		"/Users/alexander/Unity Projects/GirlJail/Assets/Ocias/ColorCycle.shader",
@@ -444,24 +489,7 @@
 		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/DialogueDebug.cs",
 		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/TextMesh Pro/Scripts/TMP_Text.cs",
 		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/TextMesh Pro/Scripts/TMPro_MeshUtilities.cs",
-		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/slaves.sublime-project",
-		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/CanvasGraphicDesignGrid.cs",
-		"/Users/alexander/Movies/Studio Ghibli/My_Neighbors_the_Yamadas_(1999)_[720p,BluRay,x264]_-_THORA/My_Neighbors_the_Yamadas_(1999)_[720p,BluRay,x264]_-_THORA.nfo",
-		"/Users/alexander/Library/Application Support/Sublime Text 3/Packages/OmniSharp/lib/omnisharp.py",
-		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/SlavesScene.cs",
-		"/Users/alexander/Library/Application Support/Sublime Text 3/Packages/User/Unity3DReference.sublime-settings",
-		"/Users/alexander/Library/Application Support/Sublime Text 3/Packages/Unity3DReference/Default (OSX).sublime-settings",
-		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/FluidGridTest.cs",
-		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/Scripts/PhysicalSun.cs",
-		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/Scripts/MenuControl.cs",
-		"/Users/alexander/Downloads/builtin_shaders-5/DefaultResourcesExtra/Unlit/Unlit-Color.shader",
-		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/Slaves/switch.fbx",
-		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/ProjectSettings/ProjectSettings.asset",
-		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assets/Ocias/QualityManager.cs",
-		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/Assembly-UnityScript-firstpass.unityproj",
-		"/Users/alexander/Downloads/amgen-email-1.1/amgen-email-1.1.html",
-		"/Users/alexander/Sites/Amgen/Amgen-Unity/README.md",
-		"/Users/alexander/Library/Application Support/Karabiner/private.xml"
+		"/Users/alexander/Unity Projects/MG001 - Slaves/MG001 - Slaves - Unity/slaves.sublime-project"
 	],
 	"find":
 	{
@@ -479,6 +507,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"smoothdamp",
+			"region_range",
+			"scale",
+			"s",
+			"scale",
+			"texel",
+			"_maintex",
+			"checkshaderand",
+			"CheckShaderAndCreateMaterial",
+			"tonemapper",
+			"outputResolution",
+			"output",
+			"input",
+			"texelsize",
+			"135",
+			"240",
+			"screenparams",
 			"pixelsnap",
 			"setuprendertex"
 		],

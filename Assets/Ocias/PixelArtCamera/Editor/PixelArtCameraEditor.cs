@@ -16,6 +16,8 @@ public class PixelArtCameraEditor : Editor {
 
 	SerializedProperty mainCamera;
 	SerializedProperty mainCanvas;
+
+	SerializedProperty requireStencilBuffer;
 	
 	void OnEnable () {
 		pixels = serializedObject.FindProperty("pixels");		
@@ -28,6 +30,7 @@ public class PixelArtCameraEditor : Editor {
 		finalBlitStretch = serializedObject.FindProperty("finalBlitStretch");
 		mainCamera = serializedObject.FindProperty("mainCamera");
 		mainCanvas = serializedObject.FindProperty("mainCanvas");
+		requireStencilBuffer = serializedObject.FindProperty("requireStencilBuffer");
 	}
 
 	public override void OnInspectorGUI() {
@@ -39,6 +42,7 @@ public class PixelArtCameraEditor : Editor {
 		pixelsPerUnit.floatValue = EditorGUILayout.FloatField("Pixels Per Unit", pixelsPerUnit.floatValue);
 		smooth.boolValue = EditorGUILayout.Toggle("Smooth", smooth.boolValue);
 		forceSquarePixels.boolValue = EditorGUILayout.Toggle("Force Square Pixels", forceSquarePixels.boolValue);
+		requireStencilBuffer.boolValue = EditorGUILayout.Toggle("Require Stencil Buffer (For Masks)", requireStencilBuffer.boolValue);
 		EditorGUILayout.LabelField("Screen: " + screenResolution.vector2IntValue.x + "×" + screenResolution.vector2IntValue.y);
 		EditorGUILayout.LabelField("Pixel Resolution: " + internalResolution.vector2IntValue.x + "×" + internalResolution.vector2IntValue.y);
 		EditorGUILayout.LabelField("Upscaled Resolution: " + upscaledResolution.vector2IntValue.x + "×" + upscaledResolution.vector2IntValue.y);
