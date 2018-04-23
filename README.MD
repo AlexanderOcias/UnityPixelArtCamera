@@ -1,6 +1,7 @@
 Unity Pixel Art Camera
 ======================
 Solves the key issues with pixel art rendering in Unity with no headaches.
+
 1. Displays sprites without distortion
 2. Enforces a consistent pixel size
 3. Conforms to a pixel grid
@@ -18,3 +19,12 @@ It’s super easy to get started:
 4. Put a material using the ‘Ocias/Pixel Art Sprite’ shader on your sprites.
 
 That’s it!
+
+FAQs
+----
+* **Why is my font not displaying correctly?**
+
+  Make sure you configure its import settings for pixel art. Set the asset's font size to the designed value, set the rendering mode to raster, and make sure the text object uses the same font size.
+* **Why is my world-space canvas not displaying correctly?**
+
+  It may not be matching your game's pixels-per-unit settings. Set the scale of your world-space canvas to (1 / Pixels-per-unit).

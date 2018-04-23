@@ -66,16 +66,6 @@ public class PixelArtCamera : MonoBehaviour {
 		if (pixels.x == 0 || pixels.y == 0) {
 			return;
 		}
-		// Configure canvas properly to match camera
-		if (mainCanvas != null) {
-			mainCanvas.renderMode = RenderMode.ScreenSpaceCamera;
-			mainCanvas.worldCamera = mainCamera;
-			CanvasScaler scaler = mainCanvas.GetComponent<CanvasScaler>();
-			scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-			scaler.referenceResolution = new Vector2(pixels.x, pixels.y);
-			scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
-			scaler.referencePixelsPerUnit = pixelsPerUnit;
-		}
 		
 		if (rt != null) {
 			rt.Release();
@@ -114,6 +104,23 @@ public class PixelArtCamera : MonoBehaviour {
 					finalBlitStretch.y = (internalResAspect / currentAspectRatio);
 				}
 			}
+		}
+
+		// Configure canvas properly to match camera
+		if (mainCanvas != null) {
+			mainCanvas.renderMode = RenderMode.ScreenSpaceCamera;
+			mainCanvas.worldCamera = mainCamera;
+			CanvasScaler scaler = mainCanvas.GetComponent<CanvasScaler>();
+			scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+			//scaler.referenceResolution = new Vector2(pixels.x, pixels.y);
+			scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
+			scaler.referencePixelsPerUnit = pixelsPerUnit;
+
+			// If we're stretching to a non-square pixel ratio, we need to make sure the canvas scaler keeps our pixel per unit ratio
+			Vector2 pixelSize;
+			pixelSize.x = (float)screenResolution.x / (float)internalResolution.x;
+			pixelSize.y = (float)screenResolution.y / (float)internalResolution.y;
+			scaler.referenceResolution = new Vector2((float)pixels.x * pixelSize.x/pixelSize.y, (float)pixels.y);
 		}
 
 		// Make sure our camera projection fits our resolution
