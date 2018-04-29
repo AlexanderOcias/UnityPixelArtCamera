@@ -48,7 +48,7 @@ Shader "Ocias/Pixel Art Sprite"
 			};
 			
 			fixed4 _Color;
-			float _PixelsPerUnit;
+			uniform float PIXELS_PER_UNIT;
 
 			inline float4 ViewSpacePixelSnap (float4 pos) {
 				float pixelSize = _ScreenParams.xy;
@@ -66,30 +66,32 @@ Shader "Ocias/Pixel Art Sprite"
 				return pos;
 			}
 
-			// inline float4 WorldSpacePixelSnap (float4 pos) {
+			inline float4 WorldSpacePixelSnap (float4 pos) {
 
-			// 	//float ppu = _PixelsPerUnit;
-			// 	float zoom = 1/(unity_CameraProjection[1][1]);
-			// 	float ppu = _ScreenParams.y / zoom / 2;
+				//float ppu = _PixelsPerUnit;
+				// float zoom = unity_OrthoParams.y;
+				// float ppu = _ScreenParams.y / zoom / 2;
+				float ppu = PIXELS_PER_UNIT;
 
-			// 	pos = mul(unity_ObjectToWorld, pos);
+				pos = mul(unity_ObjectToWorld, pos);
 				
-			// 	// World space Pixel Snapping
-			// 	pos = floor(pos * ppu + 1 / ppu) / ppu;
-			// 	// Adjust to pixel relative to camera position
-			// 	float3 snappedCameraPosition = floor(_WorldSpaceCameraPos * ppu + 1 / ppu) / ppu;
-			// 	float3 cameraSubpixelOffset = snappedCameraPosition - _WorldSpaceCameraPos;
-			// 	pos.x -= cameraSubpixelOffset.x;
-			// 	pos.y -= cameraSubpixelOffset.y;
-			// 	// Odd resolution handling
-			// 	float2 odd = _ScreenParams.xy % 2;
-			// 	pos.x += odd.x * 0.5 / ppu;
-			// 	pos.y += odd.y * 0.5 / ppu;
 
-			// 	pos = mul(unity_WorldToObject, pos);
+				// World space Pixel Snapping
+				pos = floor(pos * ppu + 1 / ppu) / ppu;
+				// Adjust to pixel relative to camera position
+				// float3 snappedCameraPosition = floor(_WorldSpaceCameraPos * ppu + 1 / ppu) / ppu;
+				// float3 cameraSubpixelOffset = snappedCameraPosition - _WorldSpaceCameraPos;
+				// pos.x -= cameraSubpixelOffset.x;
+				// pos.y -= cameraSubpixelOffset.y;
+				// Odd resolution handling
+				float2 odd = _ScreenParams.xy % 2;
+				pos.x += odd.x * 0.5 / ppu;
+				pos.y += odd.y * 0.5 / ppu;
 
-			// 	return pos;
-			// }
+				pos = mul(unity_WorldToObject, pos);
+
+				return pos;
+			}
 
 			
 
@@ -97,11 +99,12 @@ Shader "Ocias/Pixel Art Sprite"
 			{
 				v2f OUT;
 
-				//IN.vertex = WorldSpacePixelSnap(IN.vertex);
+				IN.vertex = WorldSpacePixelSnap(IN.vertex);
 
 				// Offset position based on distance from camera to nearest pixel
-				float zoom = 1/(unity_CameraProjection[1][1]);
-				float ppu = _ScreenParams.y / zoom / 2;
+				// float zoom = unity_OrthoParams.y;
+				// float ppu = _ScreenParams.y / zoom / 2;
+				float ppu = PIXELS_PER_UNIT;
 				float3 snappedCameraPosition = floor(_WorldSpaceCameraPos * ppu + 1 / ppu) / ppu;
 				float3 cameraSubpixelOffset = snappedCameraPosition - _WorldSpaceCameraPos;
 				IN.vertex.x -= cameraSubpixelOffset.x;
@@ -115,7 +118,9 @@ Shader "Ocias/Pixel Art Sprite"
 				OUT.texcoord = IN.texcoord;
 				OUT.color = IN.color * _Color;
 
-				OUT.vertex = ViewSpacePixelSnap(OUT.vertex);
+				//OUT.vertex = ViewSpacePixelSnap(OUT.vertex);
+
+
 
 				return OUT;
 			}

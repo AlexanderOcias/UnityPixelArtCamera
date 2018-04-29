@@ -125,6 +125,7 @@ public class PixelArtCamera : MonoBehaviour {
 
 		// Make sure our camera projection fits our resolution
 		mainCamera.orthographicSize = internalResolution.y / 2f / pixelsPerUnit;
+		Shader.SetGlobalFloat("PIXELS_PER_UNIT", pixelsPerUnit);
 
 		// rt = new RenderTexture(internalResolution.x, internalResolution.y, 16, RenderTextureFormat.ARGB32);
 		
@@ -146,6 +147,9 @@ public class PixelArtCamera : MonoBehaviour {
 		} else {
 			rt.filterMode = FilterMode.Point;
 		}
+		// if (windowboxing) {
+		// 	rt.filterMode = FilterMode.Point;
+		// }
 		if (requireStencilBuffer) {
 			rt.depth = 32;
 		}
@@ -161,8 +165,15 @@ public class PixelArtCamera : MonoBehaviour {
 		// null the targettexture so we can blit to the screen
 		mainCamera.targetTexture = null;
 		
-
-		if (smooth) {
+		/*if (windowboxing) {
+			// find suitable scale
+			int scaleMultiple = Mathf.FloorToInt((float)Screen.width / (float)internalResolution.x);
+			upscaledResolution.x = internalResolution.x * scaleMultiple;
+			upscaledResolution.y = internalResolution.y * scaleMultiple;
+			Vector2 stretch = new Vector2(1f/((float)upscaledResolution.x/(float)Screen.width), 1f/((float)upscaledResolution.y/(float)Screen.height));
+			Graphics.Blit(rt, null, stretch, (stretch - Vector2.one) / -2f);
+			// Graphics.Blit(rt, null, new Vector2(upscaledResolution.x / (float)Screen.width, upscaledResolution.y / (float)Screen.height), new Vector2(0f, 0f));
+		} else */if (smooth) {
 			Graphics.Blit(rt, null, finalBlitStretch, (finalBlitStretch - Vector2.one) / -2f);
 		} else if (useUpscaleShader) {
 			upscaleMaterial.SetVector("_DestinationResolution", new Vector4(Screen.width, Screen.height, 0, 0));
