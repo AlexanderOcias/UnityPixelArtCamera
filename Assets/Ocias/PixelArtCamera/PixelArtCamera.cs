@@ -10,17 +10,21 @@ public class PixelArtCamera : MonoBehaviour {
 	[HideInInspector] public Vector2Int screenResolution;
 	[HideInInspector] public Vector2Int internalResolution;
 	[HideInInspector] public Vector2Int upscaledResolution;
-	//[SerializeField] bool windowboxing = false; //Maybe implement this later?
 	[HideInInspector] public bool smooth = false;
 	[HideInInspector] public bool forceSquarePixels = false;
 	[HideInInspector] public Vector2Int pixels = new Vector2Int(1080/12, 1920/12);
 	[HideInInspector] public float pixelsPerUnit = 100f;
 	[HideInInspector] public bool requireStencilBuffer = false;
+	[HideInInspector] public Vector2 pixelAspectRatio = Vector2.one;
+	[HideInInspector] public bool windowboxing = false; //Maybe implement this later?
+	[HideInInspector] public bool integerScaleOnly = false; //Maybe implement this later?
 	public bool useUpscaleShader = false;
 
 	public Material upscaleMaterial;
 
 	RenderTexture rt;
+
+	Rect viewportRect;
 
 	float targetAspectRatio;
 	float currentAspectRatio;
@@ -74,26 +78,71 @@ public class PixelArtCamera : MonoBehaviour {
 		screenResolution.x = Screen.width;
 		screenResolution.y = Screen.height;
 
-		targetAspectRatio = (float)pixels.x / (float)pixels.y;
-		currentAspectRatio = (float)Screen.width / (float)Screen.height;
+		float pixelAspect = 1;
+		if (pixelAspectRatio.x > 0 && pixelAspectRatio.y > 0) {
+			pixelAspect = pixelAspectRatio.x / pixelAspectRatio.y;
+		}
+
+		targetAspectRatio = (float)pixels.x / (float)pixels.y * pixelAspect; //1.5
+		currentAspectRatio = (float)Screen.width / (float)Screen.height; // 1.777778
+		
 		
 		internalResolution.x = pixels.x;
 		internalResolution.y = pixels.y;
 		
 		// Figure out best pixel resolution for aspect ratio we're on
 		if (currentAspectRatio != targetAspectRatio) {
-			if (currentAspectRatio > targetAspectRatio) {
+			if (windowboxing) {
+				// Leave internal res alone
+			} else if (currentAspectRatio > targetAspectRatio) {
 				// Wider screen
-				internalResolution.x = (int)Mathf.Round((float)pixels.y * currentAspectRatio);
+				internalResolution.x = (int)Mathf.Round((float)pixels.y * currentAspectRatio / pixelAspect);
 			} else {
 				// Taller screen
-				internalResolution.y = (int)Mathf.Round((float)pixels.x / currentAspectRatio);
+				internalResolution.y = (int)Mathf.Round((float)pixels.x / currentAspectRatio * pixelAspect);
 			}
 		}
 		
+		
+		// Determine viewport rect
+		float vWidth = 1f;
+		float vHeight = 1f;
+		if (windowboxing) {
+			int scaleMultiple = Mathf.FloorToInt((float)Screen.width / (float)internalResolution.x);
+			if (currentAspectRatio > targetAspectRatio) {
+				vWidth = targetAspectRatio / currentAspectRatio;
+
+				if (integerScaleOnly) {
+					float proportion = (float)scaleMultiple * internalResolution.y / Screen.height;
+					vWidth *= proportion;
+					vHeight *= proportion;
+				}
+
+				viewportRect = new Rect((1f - vWidth) / 2f,(1f - vHeight) / 2f,vWidth,vHeight);
+
+				
+
+			} else {
+				vHeight = currentAspectRatio / targetAspectRatio;
+
+				if (integerScaleOnly) {
+					float proportion = (float)scaleMultiple * internalResolution.x / Screen.width;
+					vWidth *= proportion;
+					vHeight *= proportion;
+				}
+
+				viewportRect = new Rect((1f - vWidth) / 2f,(1f - vHeight) / 2f,vWidth,vHeight);
+			}
+			
+		} else {
+			viewportRect = new Rect(0,0,1f,1f);
+		}
+
 		// Determine scale to keep pixels square
 		finalBlitStretch = Vector2.one;
-		if (forceSquarePixels) {
+		if (windowboxing) {
+
+		} else if (forceSquarePixels) {
 			float internalResAspect = (float)internalResolution.x / (float)internalResolution.y;
 			if (currentAspectRatio != targetAspectRatio) {
 				if (currentAspectRatio > targetAspectRatio) {
@@ -121,6 +170,9 @@ public class PixelArtCamera : MonoBehaviour {
 			pixelSize.x = (float)screenResolution.x / (float)internalResolution.x;
 			pixelSize.y = (float)screenResolution.y / (float)internalResolution.y;
 			scaler.referenceResolution = new Vector2((float)pixels.x * pixelSize.x/pixelSize.y, (float)pixels.y);
+			if (windowboxing) {
+				scaler.referenceResolution = new Vector2((float)pixels.x, (float)pixels.y);
+			}
 		}
 
 		// Make sure our camera projection fits our resolution
@@ -157,11 +209,13 @@ public class PixelArtCamera : MonoBehaviour {
 			// Render to our small internal texture
 			mainCamera.targetTexture = rt;
 		}
+		mainCamera.rect = new Rect(0,0,1f,1f);
     }
 	void OnPostRender() {
 		if (mainCamera == null) {
 			return;
 		}
+		mainCamera.rect = viewportRect;
 		// null the targettexture so we can blit to the screen
 		mainCamera.targetTexture = null;
 		

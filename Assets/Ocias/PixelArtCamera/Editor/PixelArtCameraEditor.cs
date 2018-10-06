@@ -18,6 +18,10 @@ public class PixelArtCameraEditor : Editor {
 	SerializedProperty mainCanvas;
 
 	SerializedProperty requireStencilBuffer;
+
+	SerializedProperty pixelAspectRatio;
+	SerializedProperty windowboxing;
+	SerializedProperty integerScaleOnly;
 	
 	void OnEnable () {
 		pixels = serializedObject.FindProperty("pixels");		
@@ -31,6 +35,10 @@ public class PixelArtCameraEditor : Editor {
 		mainCamera = serializedObject.FindProperty("mainCamera");
 		mainCanvas = serializedObject.FindProperty("mainCanvas");
 		requireStencilBuffer = serializedObject.FindProperty("requireStencilBuffer");
+
+		pixelAspectRatio = serializedObject.FindProperty("pixelAspectRatio");
+		windowboxing = serializedObject.FindProperty("windowboxing");
+		integerScaleOnly = serializedObject.FindProperty("integerScaleOnly");
 	}
 
 	public override void OnInspectorGUI() {
@@ -50,6 +58,11 @@ public class PixelArtCameraEditor : Editor {
 		pixelSize.x = (float)screenResolution.vector2IntValue.x / (float)internalResolution.vector2IntValue.x / finalBlitStretch.vector2Value.x;
 		pixelSize.y = (float)screenResolution.vector2IntValue.y / (float)internalResolution.vector2IntValue.y / finalBlitStretch.vector2Value.y;
 		EditorGUILayout.LabelField("Pixel Scale: " + pixelSize.x + "×" + pixelSize.y);
+		EditorGUILayout.LabelField("");
+		EditorGUILayout.LabelField("Experimental Features");
+		pixelAspectRatio.vector2Value = EditorGUILayout.Vector2Field("Pixel Aspect Ratio", pixelAspectRatio.vector2Value);
+		windowboxing.boolValue = EditorGUILayout.Toggle("Windowboxing", windowboxing.boolValue);
+		integerScaleOnly.boolValue = EditorGUILayout.Toggle("   ^ Integer Scale Only", integerScaleOnly.boolValue);
 
 		serializedObject.ApplyModifiedProperties ();
 	}
